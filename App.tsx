@@ -4,6 +4,7 @@ import { RoastResult } from './components/RoastResult';
 import { Loading } from './components/Loading';
 import { roastWebsite } from './services/gemini';
 import { RoastRequest, RoastResponse, RoastState } from './types';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [state, setState] = useState<RoastState>(RoastState.IDLE);
@@ -98,6 +99,7 @@ export default function App() {
           BUILT WITH HATE BY GEMINI & REACT.
         </p>
       </footer>
+      <Analytics />
     </div>
   );
 }
